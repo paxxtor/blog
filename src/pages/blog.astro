@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+const allPosts = await Astro.glob('../pages/posts/*.md');
+const pageTitle = "Blog sobre programación";
+import Navigation from '../components/Navigation.astro';
+---
+<Navigation />
+<BaseLayout pageTitle={pageTitle}>
+  <p>En este blog compartire sobre fundamentos de programación</p>
+  <ul>
+    {allPosts.map((post) => <li class="estilolist"><a class="estilos" href={post.url}>{post.frontmatter.title}</a></li>)}
+  </ul>
+</BaseLayout>
+
+<style>
+  .estilos{
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(63, 0, 100);
+    padding: 10px;
+    border-radius: 1rem;
+    line-height: 50px;
+  }
+  .estilos:hover{
+    
+    background-color: rgb(122, 6, 255);
+  }
+</style>

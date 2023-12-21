@@ -1,0 +1,28 @@
+---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Navigation />
+
+    <h1>Presentación</h1>
+    <h2>Miguel Estuardo Paxtor Tecum</h2>
+
+    <p>Nací en el Departamento de Totonicapán el 06 de Febrero del año 2000, actualmente téngo 23 años, desde pequeño me ha gustado la técnología, los videojuegos, anime, entre otros hobbies.</p>
+
+    <p>Estudié la carrera de Périto en Electrónica Industrial, una carrera muy bonita donde aprendí mucho sobre el mundo técnologico, y desde entonces me interesé mucho en la programación, empece programando un microcontrolador llamado Arduino que tiene como base el lenguaje C, luego aprendí logica de programación y me intereso sobre otros dispositivos llamados PIC que son las iniciales de <span>Programmable Integrated Circuit</span> en las que de igual manera aprendí a programarlos.</p>
+
+    <p>Otro de los dispositivos que aprendí a programar fueron los llamados PLC que son las iniciales de <span>Programmable Logic Controller</span> que comúnmente son utilizados en las grandes industrias.</p>
+    <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
+  </body>
+</html>
